@@ -1,6 +1,12 @@
 {
   "name": "next-auth",
+  "version": "0.1.0",
   "private": true,
+  "description": "Authentication for Next.js",
+  "author": {
+    "name": "Styllth Saraiva Ribeiro",
+    "email": "styllth@yahoo.com.br"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,5 +24,25 @@
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
     "typescript": "4.5.4"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid",
+    "overrides": [
+      {
+        "files": "*.md",
+        "options": {
+          "printWidth": 100,
+          "tabWidth": 4
+        }
+      }
+    ]
   }
 }
