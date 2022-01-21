@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import { threadId } from 'worker_threads';
 // import Auth0Provider from 'next-auth/providers/auth0';
 // import FacebookProvider from 'next-auth/providers/facebook';
 // import GithubProvider from 'next-auth/providers/github';
@@ -149,5 +150,11 @@ export default NextAuth({
   events: {},
 
   // Enable debug messages in the console if you are having problems
-  debug: false
+  debug: false,
+
+  theme: {
+    colorScheme: 'light',
+    brandColor: '#0070f3',
+    logo: '/static/logo.svg'
+  }
 });

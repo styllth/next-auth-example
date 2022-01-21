@@ -7,7 +7,7 @@ export const Header = () => {
 
   return (
     <header>
-      <div className={styles.signedInStatus}>
+      <div className={styles.headerWrapper}>
         <p
           className={`nojs-show ${
             !session && loading ? styles.loading : styles.loaded
@@ -16,7 +16,7 @@ export const Header = () => {
           {!session && (
             <>
               <span className={styles.notSignedInText}>
-                You are not signed in
+                Você não está logado.
               </span>
               <a
                 href={`/api/auth/signin`}
@@ -26,7 +26,7 @@ export const Header = () => {
                   signIn();
                 }}
               >
-                Sign in
+                Login
               </a>
             </>
           )}
@@ -37,9 +37,9 @@ export const Header = () => {
                 className={styles.avatar}
               />
               <span className={styles.signedInText}>
-                <small>Signed in as</small>
+                <small>Bem vindo, </small>
                 <br />
-                <strong>{session.user.email || session.user.name}</strong>
+                <strong>{session.user.name}</strong>
               </span>
               <a
                 href={`/api/auth/signout`}
@@ -49,7 +49,7 @@ export const Header = () => {
                   signOut();
                 }}
               >
-                Sign out
+                Sair
               </a>
             </>
           )}
